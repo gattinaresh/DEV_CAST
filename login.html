@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #909090;
+        }
+        
+        .main-div {
+            background-color: #efefef;
+            max-width: 368px;
+            width: 100%;
+            margin: 6px auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+            margin-top: 30px;
+        }
+        
+        .main-div form {
+            position: relative;
+            padding: 15px;
+            margin-top: -5px;
+        }
+        
+        img {
+            vertical-align: middle;
+            border-style: none;
+        }
+        
+        .textDescription-customizable {
+            padding-top: 13px;
+            padding-bottom: 10px;
+            display: block;
+            font-size: 16px;
+        }
+        
+        img.custom_login_logo {
+            display: block;
+            margin: auto;
+            padding: 25px 0px 25px 0px;
+            height: 150px;
+        }
+        
+        div {
+            display: block;
+        }
+        
+        .submitButton-customizable {
+            font-size: 14px;
+            font-weight: bold;
+            margin: 20px 0px 10px 0px;
+            height: 40px;
+            width: 100%;
+            color: #fff;
+            background-color: #F45F63;
+            border: 1px solid #2e6da4 !important;
+            border-radius: 5px !important;
+        }
+        
+        label {
+            display: inline-block;
+            margin-bottom: .5rem;
+        }
+        
+        .inputField-customizable {
+            width: 100%;
+            height: 34px;
+            /* color: #555; */
+            /* background-color: #fff; */
+            border: 1px solid #ccc;
+            padding: 6px 12px;
+            border-radius: 4px;
+        }
+        
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        
+        p {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        
+        .signUp {
+            background-color: #0b659a
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main-div">
+        <img alt="allianceconnect-logo" class="custom_login_logo" src="https://i.pinimg.com/236x/f7/0a/38/f70a383c452d9d061dc0eaf9f366994d.jpg">
+        <form onsubmit="submitLoginForm(event)">
+            <span class="textDescription-customizable ">Sign in with your username and password</span>
+            <div class="input-text-wrapper">
+                <label class="control-label"> Username </label>
+                <input class="inputField-customizable" required="required" id="cognito_custom_login_screenName" name="cognito_custom_login_screenName" type="text" value="" aria-required="true">
+            </div>
+            <div class="input-text-wrapper">
+                <label class="control-label" for="cognito_custom_login_password"> Password </label>
+                <input class="inputField-customizable" id="cognito_custom_login_password" required="required" name="cognito_custom_login_password" type="password" value="" aria-required="true"> </div>
+            <div class="signin">
+                <button class="submitButton-customizable w-100" id="cognito_custom_login_submit" type="submit"> <span class="login-custom-spinner" style="display:none;"></span> <span class="lfr-btn-label">Sign In</span> </button>
+                <p>Or Sign Up</p>
+                <button class="submitButton-customizable w-100 signUp" id="cognito_custom_login_submit_up" type="submit"> <span class="login-custom-spinner" style="display:none;"></span> <span class="lfr-btn-label">Sign Up</span> </button>
+
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
