@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<style> 
+	.container {
+    	width: 100%;
+    	background: #fff;
+		}
+		body {
+            background-color:#fff;
+        }
+        .main-divone table {
+		    width: 100%;
+		}		        
+        .main-div {
+            background-color: #efefef;
+            max-width: 368px;
+            width: 100%;
+            margin: 6px auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+            margin-top: 30px;
+        }
+        
+        .main-div form {
+            position: relative;
+            padding: 15px;
+            margin-top: -5px;
+        }
+        
+        img {
+            vertical-align: middle;
+            border-style: none;
+        }
+        
+        .textDescription-customizable {
+            padding-top: 13px;
+            padding-bottom: 10px;
+            display: block;
+            font-size: 16px;
+        }
+        
+        img.custom_login_logo {
+            display: block;
+            margin: auto;
+            padding: 25px 0px 25px 0px;
+            height: 150px;
+        }
+        
+        div {
+            display: block;
+        }
+        
+        .submitButton-customizable {
+            font-size: 14px;
+            font-weight: bold;
+            margin: 20px 0px 10px 0px;
+            height: 40px;
+            width: 100%;
+            color: #fff;
+            background-color: #F45F63;
+            border: 1px solid #2e6da4 !important;
+            border-radius: 5px !important;
+        }
+        
+        label {
+            display: inline-block;
+            margin-bottom: .5rem;
+        }
+        
+        .inputField-customizable {
+            width: 100%;
+            height: 34px;
+            /* color: #555; */
+            /* background-color: #fff; */
+            border: 1px solid #ccc;
+            padding: 6px 12px;
+            border-radius: 4px;
+        }
+        
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        
+        p {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        
+        .signUp {
+            background-color: #0b659a
+        }
+	     .banerimg img{
+	     	width: 100%;
+	     	height: 400px;
+	     }
+	     .tableheader th{
+	     	color: #777;
+		    font-weight: bold;
+		    text-align: center;
+		    font-size: 18px;
+	     }
+		 caption {
+		    padding-bottom: 8px;
+		    color: #777;
+		    font-weight: bold;
+		    text-align: center;
+		    font-size: 18px;
+		    padding-top: 0px;
+		}
+		.main-divone {
+		    margin-bottom: 35px;
+		}
+		.tableheader td p {
+		    text-align: left;
+		    padding-left: 10px;
+		    margin: 10px;
+		}
+		.row.banerimg {
+		    padding: 0px 15px 15px;
+		}
+		hr {
+			    margin-top: 5px !important;
+			}
+
+	</style>
+	<script>
+		$(document).ready(function(){
+		  // $("#hide").click(function(){
+		  //   $("p").hide();
+		  // });
+		  $("#cognito_custom_login_submit").click(function(){
+		    $(".main-divone").show();
+		    $(".main-div").hide();
+		  });
+		});
+	</script>
+</head>
+<body>
+ <div class="container">
+ 	<div class="main-div">
+        <img alt="allianceconnect-logo" class="custom_login_logo" src="https://i.pinimg.com/236x/f7/0a/38/f70a383c452d9d061dc0eaf9f366994d.jpg">
+        <form onsubmit="submitLoginForm(event)">
+            <span class="textDescription-customizable ">Sign in with your username and password</span>
+            <div class="input-text-wrapper">
+                <label class="control-label"> Username </label>
+                <input class="inputField-customizable" required="required" id="cognito_custom_login_screenName" name="cognito_custom_login_screenName" type="text" value="" aria-required="true">
+            </div>
+            <div class="input-text-wrapper">
+                <label class="control-label" for="cognito_custom_login_password"> Password </label>
+                <input class="inputField-customizable" id="cognito_custom_login_password" required="required" name="cognito_custom_login_password" type="password" value="" aria-required="true"> </div>
+            <div class="signin">
+                <button class="submitButton-customizable w-100" id="cognito_custom_login_submit" type="submit"> <span class="login-custom-spinner" style="display:none;"></span> <span class="lfr-btn-label">Sign In</span> </button>
+                <p>Or Sign Up</p>
+                <button class="submitButton-customizable w-100 signUp" id="cognito_custom_login_submit_up" type="submit"> <span class="login-custom-spinner" style="display:none;"></span> <span class="lfr-btn-label">Sign Up</span> </button>
+
+            </div>
+        </form>
+    </div>
+    <div class="main-divone" style="display: none;">
+	 	<div class="row banerimg">
+	 		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQU8SR-hN44_CkyLnq7BD-SGJ9R8-0lizkBCCttB9FZ0Ykd6qiO" alt="img">
+	 	</div>
+	 	<table  border="1">
+		  <tr class="tableheader">
+		    <th width="176" height="56" scope="col">HOME</th>
+		    <th width="445" scope="col">LOGIN
+		    <div class="LOGIN DETAILS"></div></th>
+		    <th width="190" scope="col">LOGOUT</th>
+		  </tr>
+		</table>
+		<p>&nbsp;</p>
+		<hr />
+		<div class="PAGE">
+		  <table width="327" height="53" border="1">
+		    <caption>
+		      TEAM 1
+		    </caption>
+		    <tr class="tableheader">
+		      <th width="163" scope="row">NEW PAGE  </th>
+		      <td width="148"><p>NEW COSTING SHEET</p>
+		      <p><a href="https://docs.google.com/spreadsheets/d/1QOJyELKLaBCm7Ji5MuFLgbJ0Q3hR_LYLdaHCHnRmeR4/edit?usp=sharing" target="_blank">https://docs.google.com/spreadsheets/d/1QOJyELKLaBCm7Ji5MuFLgbJ0Q3hR_LYLdaHCHnRmeR4/edit?usp=sharing</a></p></td>
+		    </tr>
+		  </table>
+		  <p>&nbsp;</p>
+		   <table width="327" height="53" border="1">
+		    <caption>
+		      TEAM 2
+		    </caption>
+		    <tr class="tableheader">
+		      <th width="163" scope="row">NEW PAGE  </th>
+		      <td width="148"><p>NEW COSTING SHEET</p>
+		      <p><a href="https://docs.google.com/spreadsheets/d/1QOJyELKLaBCm7Ji5MuFLgbJ0Q3hR_LYLdaHCHnRmeR4/edit?usp=sharing" target="_blank">https://docs.google.com/spreadsheets/d/1QOJyELKLaBCm7Ji5MuFLgbJ0Q3hR_LYLdaHCHnRmeR4/edit?usp=sharing</a></p></td>
+		    </tr>
+		  </table>
+		  <p>&nbsp;</p>
+		   <table width="327" height="53" border="1">
+		    <caption>
+		      TEAM 3
+		    </caption>
+		    <tr class="tableheader">
+		      <th width="163" scope="row">NEW PAGE  </th>
+		      <td width="148"><p>NEW COSTING SHEET</p>
+		      <p><a href="https://docs.google.com/spreadsheets/d/1QOJyELKLaBCm7Ji5MuFLgbJ0Q3hR_LYLdaHCHnRmeR4/edit?usp=sharing" target="_blank">https://docs.google.com/spreadsheets/d/1QOJyELKLaBCm7Ji5MuFLgbJ0Q3hR_LYLdaHCHnRmeR4/edit?usp=sharing</a></p></td>
+		    </tr>
+		  </table>
+		  <p>&nbsp;</p>
+		   <table width="327" height="53" border="1">
+		    <caption>
+		      TEAM 4
+		    </caption>
+		    <tr class="tableheader">
+		      <th width="163" scope="row">NEW PAGE  </th>
+		      <td width="148"><p>NEW COSTING SHEET</p>
+		      <p><a href="https://docs.google.com/spreadsheets/d/1QOJyELKLaBCm7Ji5MuFLgbJ0Q3hR_LYLdaHCHnRmeR4/edit?usp=sharing" target="_blank">https://docs.google.com/spreadsheets/d/1QOJyELKLaBCm7Ji5MuFLgbJ0Q3hR_LYLdaHCHnRmeR4/edit?usp=sharing</a></p></td>
+		    </tr>
+		  </table>
+		  <p>&nbsp;</p>
+		   <table width="327" height="53" border="1">
+		    <caption>
+		      TEAM 5
+		    </caption>
+		    <tr class="tableheader">
+		      <th width="163" scope="row">NEW PAGE  </th>
+		      <td width="148"><p>NEW COSTING SHEET</p>
+		      <p><a href="https://docs.google.com/spreadsheets/d/1QOJyELKLaBCm7Ji5MuFLgbJ0Q3hR_LYLdaHCHnRmeR4/edit?usp=sharing" target="_blank">https://docs.google.com/spreadsheets/d/1QOJyELKLaBCm7Ji5MuFLgbJ0Q3hR_LYLdaHCHnRmeR4/edit?usp=sharing</a></p></td>
+		    </tr>
+		  </table>
+		  <p>&nbsp;</p>
+		   <table width="327" height="53" border="1">
+		    <caption>
+		      TEAM 6
+		    </caption>
+		    <tr class="tableheader">
+		      <th width="163" scope="row">NEW PAGE  </th>
+		      <td width="148"><p>NEW COSTING SHEET</p>
+		      <p><a href="https://docs.google.com/spreadsheets/d/1QOJyELKLaBCm7Ji5MuFLgbJ0Q3hR_LYLdaHCHnRmeR4/edit?usp=sharing" target="_blank">https://docs.google.com/spreadsheets/d/1QOJyELKLaBCm7Ji5MuFLgbJ0Q3hR_LYLdaHCHnRmeR4/edit?usp=sharing</a></p></td>
+		    </tr>
+		  </table>
+		  <p>&nbsp;</p>
+		   <table width="327" height="53" border="1">
+		    <caption>
+		      TEAM 7
+		    </caption>
+		    <tr class="tableheader">
+		      <th width="163" scope="row">NEW PAGE  </th>
+		      <td width="148"><p>NEW COSTING SHEET</p>
+		      <p><a href="https://docs.google.com/spreadsheets/d/1QOJyELKLaBCm7Ji5MuFLgbJ0Q3hR_LYLdaHCHnRmeR4/edit?usp=sharing" target="_blank">https://docs.google.com/spreadsheets/d/1QOJyELKLaBCm7Ji5MuFLgbJ0Q3hR_LYLdaHCHnRmeR4/edit?usp=sharing</a></p></td>
+		    </tr>
+  </table>
+ 	</div>
+ </div>
+</body>
+</html>
